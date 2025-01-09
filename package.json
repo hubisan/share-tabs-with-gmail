@@ -1,0 +1,24 @@
+{
+  "name": "share-tabs-with-gmail",
+  "version": "0.1.0",
+  "description": "A Firefox add-on to collect open tab titles and addresses and send them via Gmail.",
+  "main": "src/background.js",
+  "scripts": {
+    "build": "web-ext build",
+    "clean": "rm -rf web-ext-artifacts",
+    "start": "web-ext run",
+    "lint": "web-ext lint"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "web-ext": "^6.7.0"
+  },
+  "keywords": [
+    "firefox",
+    "addon",
+    "tabs",
+    "gmail"
+  ],
+  "author": "Daniel Hubmann",
+  "license": "GPL-3.0"
+}

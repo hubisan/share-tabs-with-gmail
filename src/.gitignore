@@ -1,0 +1,47 @@
+# .gitignore for Firefox addon project
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build output
+dist/
+build/
+
+# Ignore temporary files
+*.log
+*.tmp
+*.temp
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore compiled files
+*.o
+*.obj
+*.dll
+*.exe
+*.out
+*.class
+
+# Ignore coverage reports
+coverage/
+*.lcov
+
+# Ignore environment variables
+.env
+.env.local
+.env.*.local
+
+# Ignore lock files
+package-lock.json
+yarn.lock
+
+# Ignore other files
+*.bak
+*.swp
+*.swo
