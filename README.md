@@ -2,8 +2,6 @@
 
 **Share Tabs with Gmail** is a Firefox addon that collects the titles and URLs of open tabs and shares them via Gmail.
 
-![Addon Icon](assets/icons/icon.png "Addon Icon")
-
 ## Features
 
 - Collects tab information (titles and URLs) and composes an email in Gmail, opened in a new tab, with:
@@ -15,19 +13,6 @@
 - Clicking the icon while holding <kbd>Shift</kbd> shares only the currently active tab (default key binding: <kbd>Alt+Shift+K</kbd>).
 
 ![Example](assets/images/example.webp "Example")
-
-## Project Structure
-
-```
-├── src
-│   ├── background.js       # Handles tab collection and Gmail integration
-│   ├── contentScript.js    # Injects HTML content into Gmail's compose window
-│   ├── options.html        # Options page structure
-│   ├── options.js          # Logic for saving and managing options
-│   └── manifest.json       # Firefox add-on configuration
-├── package.json            # npm configuration for build and scripts
-└── README.md               # Documentation for the project
-```
 
 ## Usage
 
@@ -78,6 +63,24 @@ This extension requires the following permissions:
 - `npm run clean`: Clean the build artifacts.
 - `npm run start`: Run the addon in Firefox using `web-ext`.
 - `npm run lint`: Lint the addon using `web-ext`.
+
+### Project Structure
+
+```
+├── src
+│   ├── background.js       # Handles tab collection and Gmail integration
+│   ├── contentScript.js    # Injects HTML content into Gmail's compose window
+│   │   ├── options.html    # Options page structure
+│   │   ├── options.js      # Logic for saving and managing options
+│   │   └── options.css     # Styling for the options page
+│   └── manifest.json       # Firefox add-on configuration
+├── assets
+│   ├── images
+│   │   ├── example.webp    # Example image for README
+│   │   └── options-page.webp # Preferences page image for README
+├── package.json            # npm configuration for build and scripts
+└── README.md               # Documentation for the project
+```
 
 ## License
 
