@@ -1,17 +1,20 @@
 # Share Tabs with Gmail
 
-**Share Tabs with Gmail** is a Firefox addon that collects the titles and addresses of open tabs and shares them via Gmail.
+**Share Tabs with Gmail** is a Firefox addon that collects the titles and URLs of open tabs and shares them via Gmail.
+
+![Addon Icon](assets/icons/icon.png "Addon Icon")
 
 ## Features
 
-- Collects tab information (title and address):
-  - **All Tabs**: Default behavior when clicking the addon icon.
-  - **Selected Tabs**: Only selected tabs are included (if tab selection is active).
-  - **Current Tab**: Collects only the currently active tab (by holding `Shift` while clicking the icon).
-- Opens a Gmail compose window pre-filled with:
-  - **Recipient Email**: Empty unless optionally set via the addon’s settings page.
-  - **Subject**: Automatically generated based on the titles of the tabs collected.
-  - **Body**: A neatly formatted HTML list of links using the collected titles and adresses.
+- Collects tab information (titles and URLs) and composes an email in Gmail, opened in a new tab, with:
+  - **Recipient Email**: Left empty unless optionally set via the addon’s settings page.
+  - **Subject**: Automatically generated based on the titles of the collected tabs.
+  - **Body**: A formatted HTML list of links using the collected titles and URLs.
+- Clicking the icon shares all tabs in the current window (default key binding: <kbd>Alt+Shift+J</kbd>).
+- If a selection is active, only the highlighted tabs are shared. To select multiple tabs with the mouse, hold down <kbd>Ctrl</kbd>.
+- Clicking the icon while holding <kbd>Shift</kbd> shares only the currently active tab (default key binding: <kbd>Alt+Shift+K</kbd>).
+
+![Example](assets/images/example.png "Example")
 
 ## Project Structure
 
@@ -26,28 +29,35 @@
 └── README.md               # Documentation for the project
 ```
 
-## Installation
-
-### From AMO
-
-1. Go to the [Firefox Add-ons website](https://addons.mozilla.org/).
-2. Search for "Share Tabs with Gmail".
-3. Click "Add to Firefox".
-
 ## Usage
 
-- **Send All Tabs**:
-  - Click the addon icon to send all open tabs via Gmail.
+- **Share All Tabs**: Click the addon icon or press <kbd>Alt+Shift+J</kbd> to share all open tabs in the current window via Gmail.
+- **Send Selected Tabs**: If tab selection is active, only the selected tabs will be shared.
+- **Send Current Tab**: Hold <kbd>Shift</kbd> and click the icon or press <kbd>Alt+Shift+K</kbd> to share only the active tab.
+- **Set a Default Recipient**: Use the settings page to specify a default email recipient. If not set, the Gmail draft will have an empty "To" field.
+- **Subject Line Separator**: When sharing multiple tabs, the titles of up to four tabs are included in the subject line, separated by a customizable separator. By default, the separator is ` | `, but you can change it in the addon’s settings. If there are more than four tabs, only the first four titles are shown, and they may be truncated.
+- **Change Key Bindings**: Right-click the addon icon, select **Manage Extension**, click the gear icon, and then choose **Manage Extension Shortcuts**.
+- **Note on Gmail Drafts**: Gmail automatically saves drafts for all composed emails. If you do not send the email, a draft will remain in your Gmail Drafts folder.
 
-- **Send Current Tab**:
-  - Hold `Shift` and click the addon icon to send only the currently active tab.
+### Preferences
 
-- **Send Selected Tabs**:
-  - If tab selection is active (e.g., via a tab selection addon), only the selected tabs will be included.
+The following options can be set:
 
-- **Set a Default Recipient**:
-   - Use the options page to set a default recipient email address. 
-   - If no recipient email is set, the "To" field in Gmail will be left empty, and you will need to fill it manually.
+![Preferences](assets/images/options-page.png "Preferences")
+
+## Installation
+
+- Visit the Firefox Add-ons website.
+- Search for "Share Tabs with Gmail."
+- Click Add to Firefox and follow the prompts to install.
+
+## Permissions
+
+This extension requires the following permissions:
+
+- tabs: To access information about open tabs, such as their titles and URLs.
+- storage: To locally store the default recipient email address.
+- activeTab: To interact with the currently active tab and inject the email body into Gmail.
 
 ## Development
 
@@ -71,4 +81,4 @@
 
 ## License
 
-GPLv3 License
+This project is licensed under the GPLv3 License.

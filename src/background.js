@@ -3,19 +3,27 @@
 
 browser.browserAction.onClicked.addListener((tab, onClickData) => {
     if (onClickData.modifiers.includes("Shift")) {
-        openEmailTab(true);
+        shareActiveTab();
     } else {
-        openEmailTab(false);
+        shareAllTabs();
     }
+});
+
+browser.commands.onCommand.addListener((command) => {
+  if (command === "share-all-tabs") {
+    shareAllTabs();
+  } else if (command === "share-active-tab") {
+    shareActiveTab();
+  }
 });
 
 const getTabsInfo = async (currentOnly) => {
     let tabs;
+    const activeTab = await browser.tabs.query({ active: true, currentWindow: true });
     if (currentOnly) {
-        tabs = await browser.tabs.query({ active: true, currentWindow: true });
+        tabs = activeTab;
     } else {
         tabs = await browser.tabs.query({ highlighted: true, currentWindow: true });
-        const activeTab = await browser.tabs.query({ active: true, currentWindow: true });
         if (tabs.length === 0 || (tabs.length === 1 && tabs[0].id === activeTab[0].id)) {
             tabs = await browser.tabs.query({ currentWindow: true });
         }
@@ -26,10 +34,11 @@ const getTabsInfo = async (currentOnly) => {
     }));
 };
 
-const createEmailLink = (email, tabs) => {
+const createEmailLink = async (email, tabs) => {
     let subject = '';
     let body = '<ul>';
-    const separator = ' =|= ';
+    const storageData = await browser.storage.local.get(['separator']);
+    const separator = storageData.separator || ' | ';
 
     const titles = tabs.map(tab => tab.title);
     const urls = tabs.map(tab => tab.url);
@@ -55,10 +64,10 @@ const createEmailLink = (email, tabs) => {
     };
 };
 
-const openEmailTab = async (currentOnly) => {
-    const email = await browser.storage.local.get('email');
-    const tabs = await getTabsInfo(currentOnly);
-    const emailLink = createEmailLink(email.email, tabs);
+const openEmailTab = async (tabs) => {
+    const storageData = await browser.storage.local.get(['email']);
+    const email = storageData.email || '';
+    const emailLink = await createEmailLink(email, tabs);
     const tab = await browser.tabs.create({ url: emailLink.url });
 
     // Send a message to the content script to inject the HTML body
@@ -68,4 +77,14 @@ const openEmailTab = async (currentOnly) => {
             browser.tabs.onUpdated.removeListener(listener);
         }
     });
+};
+
+const shareAllTabs = async () => {
+    const tabs = await getTabsInfo(false);
+    await openEmailTab(tabs);
+};
+
+const shareActiveTab = async () => {
+    const tabs = await getTabsInfo(true);
+    await openEmailTab(tabs);
 };
