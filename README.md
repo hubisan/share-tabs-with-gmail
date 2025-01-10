@@ -14,7 +14,7 @@
 - If a selection is active, only the highlighted tabs are shared. To select multiple tabs with the mouse, hold down <kbd>Ctrl</kbd>.
 - Clicking the icon while holding <kbd>Shift</kbd> shares only the currently active tab (default key binding: <kbd>Alt+Shift+K</kbd>).
 
-![Example](assets/images/example.png "Example")
+![Example](assets/images/example.webp "Example")
 
 ## Project Structure
 
@@ -43,7 +43,7 @@
 
 The following options can be set:
 
-![Preferences](assets/images/options-page.png "Preferences")
+![Preferences](assets/images/options-page.webp "Preferences")
 
 ## Installation
 
