@@ -2,6 +2,8 @@
 
 **Share Tabs with Gmail** is a Firefox addon that collects the titles and URLs of open tabs and shares them via Gmail.
 
+![Example](assets/images/example.webp "Example")
+
 ## Features
 
 - Collects tab information (titles and URLs) and composes an email in Gmail, opened in a new tab, with:
@@ -11,8 +13,6 @@
 - Clicking the icon shares all tabs in the current window (default key binding: <kbd>Alt+Shift+J</kbd>).
 - If a selection is active, only the highlighted tabs are shared. To select multiple tabs with the mouse, hold down <kbd>Ctrl</kbd>.
 - Clicking the icon while holding <kbd>Shift</kbd> shares only the currently active tab (default key binding: <kbd>Alt+Shift+K</kbd>).
-
-![Example](assets/images/example.webp "Example")
 
 ## Usage
 
