@@ -4,8 +4,9 @@
 node_modules/
 
 # Ignore build output
-dist/
+web-ext-artifacts/
 build/
+dist/
 
 # Ignore temporary files
 *.log

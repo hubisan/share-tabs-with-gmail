@@ -9,9 +9,8 @@
     "start": "web-ext run",
     "lint": "web-ext lint"
   },
-  "dependencies": {},
   "devDependencies": {
-    "web-ext": "^6.7.0"
+    "web-ext": "^6.8.0"
   },
   "keywords": [
     "firefox",
