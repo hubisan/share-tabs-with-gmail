@@ -25,7 +25,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
-     showgrid="false"
+     showgrid="true"
      height="210mm"
      inkscape:snap-object-midpoints="false"
      inkscape:object-paths="true"
@@ -37,9 +37,9 @@
      inkscape:snap-bbox-midpoints="false"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-midpoints="true"
-     inkscape:zoom="0.47330154"
-     inkscape:cx="385.58928"
-     inkscape:cy="271.49711"
+     inkscape:zoom="0.84039961"
+     inkscape:cx="407.54421"
+     inkscape:cy="395.64511"
      inkscape:window-width="1920"
      inkscape:window-height="1055"
      inkscape:window-x="0"
@@ -47,7 +47,13 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      inkscape:snap-nodes="false"
-     inkscape:snap-others="false" />
+     inkscape:snap-others="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid841"
+       units="px"
+       dotted="false" />
+  </sodipodi:namedview>
   <defs
      id="defs2" />
   <g
@@ -67,13 +73,13 @@
        inkscape:export-ydpi="30.959999" />
     <path
        style="fill:#f2f2f2;fill-opacity:1;stroke:#f2f2f2;stroke-width:17;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 105,96.682429 V 29.544133"
+       d="M 105,104.00566 V 36.867361"
        id="path45885"
        sodipodi:nodetypes="cc" />
     <path
        id="rect31-7-8-5-5"
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#f2f2f2;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 29.904746,168.93903 H 180.09525 V 50.584818 L 104.95781,110.20856 29.904746,51.814218 Z"
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#f2f2f2;stroke-width:15.9383;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 37.827492,173.66349 H 172.17251 V 57.360151 L 104.96227,115.95071 37.827492,58.568247 Z"
        sodipodi:nodetypes="cccccc"
        inkscape:export-filename="/home/hubisan/projects/coding/share-tabs-with-gmail/assets/images/rect4102-1.png"
        inkscape:export-xdpi="30.959999"
