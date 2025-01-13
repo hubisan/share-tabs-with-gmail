@@ -32,7 +32,7 @@ The following options can be set:
 
 ## Installation
 
-Visit <https://addons.mozilla.org/en-US/firefox/addon/share-tabs-with-gmail> and click 'Add to Firefox' and follow the prompts to install.
+Visit <https://addons.mozilla.org/en-US/firefox/addon/share-tabs-with-gmail>, click 'Add to Firefox' and follow the prompts to install.
 
 ## Permissions
 
