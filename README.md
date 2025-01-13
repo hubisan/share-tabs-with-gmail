@@ -24,17 +24,15 @@
 - **Change Key Bindings**: Right-click the addon icon, select **Manage Extension**, click the gear icon, and then choose **Manage Extension Shortcuts**.
 - **Note on Gmail Drafts**: Gmail automatically saves drafts for all composed emails. If you do not send the email, a draft will remain in your Gmail Drafts folder.
 
-### Preferences
+### Options
 
 The following options can be set:
 
-![Preferences](assets/images/options-page.webp "Preferences")
+![Options](assets/images/options-page.webp "Preferences")
 
 ## Installation
 
-- Visit the Firefox Add-ons website.
-- Search for "Share Tabs with Gmail."
-- Click Add to Firefox and follow the prompts to install.
+Visit <https://addons.mozilla.org/en-US/firefox/addon/share-tabs-with-gmail> and click 'Add to Firefox' and follow the prompts to install.
 
 ## Permissions
 
