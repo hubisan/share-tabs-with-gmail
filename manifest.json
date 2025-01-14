@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Share Tabs with Gmail",
   "version": "0.1.0",
-  "description": "Collects titles and addresses of open tabs and sends them via Gmail",
+  "description": "Collects titles and URLs of tabs and shares them via Gmail",
   "homepage_url": "https://github.com/hubisan/share-tabs-with-gmail",
   "permissions": [
     "tabs",

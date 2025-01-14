@@ -1,6 +1,6 @@
 # Share Tabs with Gmail
 
-**Share Tabs with Gmail** is a Firefox addon that collects the titles and URLs of open tabs and shares them via Gmail.
+**Share Tabs with Gmail** is a Firefox addon that collects the titles and URLs of tabs and shares them via Gmail.
 
 ![Example](assets/images/example.webp "Example")
 
@@ -10,9 +10,12 @@
   - **Recipient Email**: Left empty unless optionally set via the addon’s settings page.
   - **Subject**: Automatically generated based on the titles of the collected tabs.
   - **Body**: A formatted HTML list of links using the collected titles and URLs.
-- Clicking the icon shares all tabs in the current window (default key binding: <kbd>Alt+Shift+J</kbd>).
-- If a selection is active, only the highlighted tabs are shared. To select multiple tabs with the mouse, hold down <kbd>Ctrl</kbd>.
-- Clicking the icon while holding <kbd>Shift</kbd> shares only the currently active tab (default key binding: <kbd>Alt+Shift+K</kbd>).
+- Click the extension icon to share all tabs in the current window. (Default key binding: <kbd>Alt+Shift+J</kbd>)
+- If specific tabs are selected, only those will be shared. To select multiple tabs with the mouse, hold down <kbd>Ctrl</kbd> and click the tabs.
+- Click the icon while holding <kbd>Shift</kbd> to only share the currently active tab. (default key binding: <kbd>Alt+Shift+K</kbd>)
+
+Remark about permissions:
+The extension only interacts with Gmail’s compose window to automate the email creation process. It does not access any other data from your Gmail account or emails.
 
 ## Usage
 
@@ -26,9 +29,10 @@
 
 ### Options
 
-The following options can be set:
+The following options are available:
 
-![Options](assets/images/options-page.webp "Preferences")
+- **Email**: Predefine a recipient email address for shared tab emails. If you want to manually add a recipient each time, leave this field empty.
+- **Separator**: Customize the way links are separated in the email body. If left empty the default `|` is used.
 
 ## Installation
 
@@ -38,9 +42,9 @@ Visit <https://addons.mozilla.org/en-US/firefox/addon/share-tabs-with-gmail>, cl
 
 This extension requires the following permissions:
 
-- tabs: To access information about open tabs, such as their titles and URLs.
-- storage: To locally store the default recipient email address.
-- activeTab: To interact with the currently active tab and inject the email body into Gmail.
+- tabs: This is used to collect the titles and URLs of open tabs to include them in the email. 
+- storage: To locally store the options (default email address and custom separator).
+- activeTab: This permission is required because the extension injects a content script into Gmail's compose window to automate the insertion of tab information. The extension does not read or access other data from Gmail (e.g., your inbox or account details). It only interacts with the compose window and adds the generated email content.
 
 ## Development
 
