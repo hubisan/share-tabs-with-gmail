@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - License to each file including copyright.
-- Create an empty line between links.
+- Create an empty line between links. Will make it easier to click links on mobile.
 
 ## 0.1.0
 

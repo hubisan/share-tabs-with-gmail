@@ -63,8 +63,15 @@ const createEmailLink = async (email, tabs) => {
     }
 
     tabs.forEach((tab, index) => {
-        body += `<li><a href="${tab.url}">${tab.title}</a><br></li>`;
+        if (index === tabs.length - 1) {
+            // For the last item, omit the extra <br>
+            body += `<li><a href="${tab.url}">${tab.title}</a></li>`;
+        } else {
+            // Add <br><br> for spacing between items
+            body += `<li><a href="${tab.url}">${tab.title}</a><br><br></li>`;
+        }
     });
+
     body += '</ul>';
 
     return {
