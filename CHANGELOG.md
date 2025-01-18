@@ -7,9 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 0.2.0
+
+### Added
+
+- License to each file including copyright.
+- Create an empty line between links.
+
 ## 0.1.0
 
 ### Added
+
 - Initial release of Share Tabs with Gmail.
 - Collect titles and addresses of all open tabs and send them via Gmail.
 - Option to send only the current tab by holding the Shift key when clicking the icon.

@@ -1,72 +1,82 @@
-/* Basic styling for the options page */
+/*
+ * Copyright (C) 2025 Daniel Hubmann
+ * This stylesheet is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License Version 3.
+ * See the LICENSE file for details.
+ *
+ * Basic styling for the options page
+ */
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 form {
-    padding: 20px;
+  padding: 20px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-input[type="email"], 
+input[type="email"],
 input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
-input[type="email"]:focus, 
+input[type="email"]:focus,
 input[type="text"]:focus {
-    border-color: #007BFF;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
 }
 
 button {
-    display: inline-block;
-    width: 100%;
-    padding: 12px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 8px rgba(0, 91, 187, 0.3);
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 91, 187, 0.3);
 }
 
 button:active {
-    background-color: #004494;
-    box-shadow: none;
+  background-color: #004494;
+  box-shadow: none;
 }
 
 #status {
-    margin-top: 10px;
-    color: green;
-    font-weight: bold;
-    text-align: center;
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
 }

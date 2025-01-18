@@ -1,5 +1,13 @@
-// This file contains the JavaScript logic for the options page. It handles
-// saving and retrieving the email and separator preferences using browser storage.
+/*
+ * Copyright (C) 2025 Daniel Hubmann
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License Version 3.
+ * See the LICENSE file for details.
+ *
+ * This file contains the JavaScript logic for the options page. It handles
+ * saving and retrieving the email and separator preferences using browser
+ * storage.
+ */
 
 document.addEventListener('DOMContentLoaded', function () {
     const emailInput = document.getElementById('email');

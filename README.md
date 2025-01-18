@@ -86,4 +86,5 @@ This extension requires the following permissions:
 
 ## License
 
-This project is licensed under the GPLv3 License.
+This project is licensed under the [GNU General Public License Version 3](LICENSE).
+

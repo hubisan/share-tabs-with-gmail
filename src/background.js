@@ -1,5 +1,14 @@
-// This file contains the background script that collects the titles and addresses of all current open tabs.
-// It also handles the logic for opening a new tab with the Gmail compose URL, formatted with the recipient email, subject, and body.
+/*
+ * Copyright (C) 2025 Daniel Hubmann
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License Version 3.
+ * See the LICENSE file for details.
+ * 
+ * This file contains the background script that collects the titles and
+ * addresses of all current open tabs. It also handles the logic for opening a
+ * new tab with the Gmail compose URL, formatted with the recipient email,
+ * subject, and body.
+ */
 
 browser.browserAction.onClicked.addListener((tab, onClickData) => {
     if (onClickData.modifiers.includes("Shift")) {
@@ -10,11 +19,11 @@ browser.browserAction.onClicked.addListener((tab, onClickData) => {
 });
 
 browser.commands.onCommand.addListener((command) => {
-  if (command === "share-all-tabs") {
-    shareAllTabs();
-  } else if (command === "share-active-tab") {
-    shareActiveTab();
-  }
+    if (command === "share-all-tabs") {
+        shareAllTabs();
+    } else if (command === "share-active-tab") {
+        shareActiveTab();
+    }
 });
 
 const getTabsInfo = async (currentOnly) => {
@@ -54,7 +63,7 @@ const createEmailLink = async (email, tabs) => {
     }
 
     tabs.forEach((tab, index) => {
-        body += `<li><a href="${tab.url}">${tab.title}</a></li>`;
+        body += `<li><a href="${tab.url}">${tab.title}</a><br></li>`;
     });
     body += '</ul>';
 

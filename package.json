@@ -1,6 +1,6 @@
 {
   "name": "share-tabs-with-gmail",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A Firefox add-on to collect open tab titles and addresses and send them via Gmail.",
   "main": "src/background.js",
   "scripts": {
